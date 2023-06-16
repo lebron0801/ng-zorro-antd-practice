@@ -30,7 +30,9 @@ const routes: Routes = [
     {
       provide: APP_BASE_HREF,
       // @ts-ignore
-      useValue: window.__POWERED_BY_QIANKUN__ ? '/portal/pier' : '/',
+      useValue: window.__POWERED_BY_QIANKUN__
+        ? '/portal/pier'
+        : '/build/pier-app/',
     },
   ],
 })

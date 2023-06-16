@@ -28,21 +28,21 @@ export async function mount(props: any) {
   render();
 
   // 监听全局状态
-  props.onGlobalStateChange((state: any, prev: any) => {
-    console.log('上一个状态', prev);
-    console.log('当前状态', state);
+  // props.onGlobalStateChange((state: any, prev: any) => {
+  //   console.log('上一个状态', prev);
+  //   console.log('当前状态', state);
 
-    // if (state.portalApp.code != null && state.portalApp.code !== '') {
-    //   console.log('我要处理自己的事啦');
-    // }
+  //   // if (state.portalApp.code != null && state.portalApp.code !== '') {
+  //   //   console.log('我要处理自己的事啦');
+  //   // }
 
-    if (state.portalApp.getAuthCode) {
-      state.portalApp.getAuthCode('PAIER').then((data: any) => {
-        console.log('code', data);
-      });
-      // props.setGlobalState({ portalApp: { code: null, corpId: 'PAIER' } });
-    }
-  }, true);
+  //   if (state.portalApp.getAuthCode) {
+  //     state.portalApp.getAuthCode('PAIER').then((data: any) => {
+  //       console.log('code', data);
+  //     });
+  //     // props.setGlobalState({ portalApp: { code: null, corpId: 'PAIER' } });
+  //   }
+  // }, true);
 }
 
 export async function unmount(props: Object) {
